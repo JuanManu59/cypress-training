@@ -1,6 +1,5 @@
 class ShopingCartPage {
   private shoppingMenu: string;
-  private shoppingPageURL: string;
 
   constructor() {
     this.shoppingMenu = ".cart_navigation span";
@@ -12,4 +11,3 @@ class ShopingCartPage {
 }
 
 export {ShopingCartPage};
-

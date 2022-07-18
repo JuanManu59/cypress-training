@@ -14,6 +14,9 @@ const addressStepPage = new AddressStepPage();
 const shippingStepPage = new ShippingStepPage();
 const paymentStepPage = new PaymentStepPage();
 
+const email = "aperdomobo@gmail.com";
+const password = "WorkshopProtractor";
+
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
     menuContentPage.visitMenuContentPage();
@@ -26,9 +29,7 @@ describe("Buy a t-shirt", () => {
 
     shopingCartPage.goToCheckout();
 
-    loginPage.writeAddress();
-    loginPage.writePassword();
-    loginPage.login();
+    loginPage.login(email, password);
 
     addressStepPage.proceedCheckoutAuth();
 
@@ -38,7 +39,6 @@ describe("Buy a t-shirt", () => {
     paymentStepPage.payWithBank();
     paymentStepPage.proceedCheckout();
 
-    cy.get("#center_column > div > p > strong")
-        .should("have.text", "Your order on My Store is complete.");
+    paymentStepPage.verifyOrderComplete();
   });
 });

@@ -11,4 +11,3 @@ class AddressStepPage {
 }
 
 export {AddressStepPage};
-

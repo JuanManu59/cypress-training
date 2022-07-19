@@ -9,7 +9,7 @@ class LoginPage {
     this.loginBtn = "button#SubmitLogin.button.btn.btn-default.button-medium";
   }
 
-  public login(email: String, pwd: String): void {
+  public login(email: string, pwd: string): void {
     cy.get(this.addressText).type(email.toString());
     cy.get(this.passwordText).type(pwd.toString());
     cy.get(this.loginBtn).click();

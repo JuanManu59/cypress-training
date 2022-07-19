@@ -7,7 +7,7 @@ class ProductsListPage {
     this.checkoutBtn = "[style*='display: block;'] .button-container > a";
   }
 
-  public addToMyCar(): void {
+  public addToMyCart(): void {
     cy.get(this.addCarBtn).click();
   }
 

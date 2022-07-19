@@ -17,8 +17,8 @@ class PaymentStepPage {
     cy.get(this.checkoutBtn).click();
   }
 
-  public verifyOrderComplete(): void {
-    cy.get(this.orderComplete).should("have.text", "Your order on My Store is complete.");
+  public verifyOrderComplete(message: string): void {
+    cy.get(this.orderComplete).should("have.text", message);
   }
 }
 

@@ -23,7 +23,7 @@ describe("Buy a t-shirt", () => {
 
     menuContentPage.goToTShirtMenu();
 
-    productsListPage.addToMyCar();
+    productsListPage.addToMyCart();
 
     productsListPage.proceedCheckout();
 
@@ -39,6 +39,6 @@ describe("Buy a t-shirt", () => {
     paymentStepPage.payWithBank();
     paymentStepPage.proceedCheckout();
 
-    paymentStepPage.verifyOrderComplete();
+    paymentStepPage.verifyOrderComplete("Your order on My Store is complete.");
   });
 });

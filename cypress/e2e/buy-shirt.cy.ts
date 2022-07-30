@@ -1,26 +1,40 @@
-import {MenuContentPage} from "../page/index";
-import {ProductsListPage} from "../page/index";
-import {ShopingCartPage} from "../page/index";
-import {LoginPage} from "../page/index";
-import {AddressStepPage} from "../page/index";
-import {ShippingStepPage} from "../page/index";
-import {PaymentStepPage} from "../page/index";
-
-const menuContentPage = new MenuContentPage();
-const productsListPage = new ProductsListPage();
-const shopingCartPage = new ShopingCartPage();
-const loginPage = new LoginPage();
-const addressStepPage = new AddressStepPage();
-const shippingStepPage = new ShippingStepPage();
-const paymentStepPage = new PaymentStepPage();
-
-const email = "aperdomobo@gmail.com";
-const password = "WorkshopProtractor";
+import {
+  MenuContentPage,
+  ProductsListPage,
+  ShopingCartPage,
+  LoginPage,
+  AddressStepPage,
+  ShippingStepPage,
+  PaymentStepPage} from "../page/index";
 
 describe("Buy a t-shirt", () => {
+  let menuContentPage: MenuContentPage;
+  let productsListPage: ProductsListPage;
+  let shopingCartPage: ShopingCartPage;
+  let loginPage: LoginPage;
+  let addressStepPage: AddressStepPage;
+  let shippingStepPage: ShippingStepPage;
+  let paymentStepPage: PaymentStepPage;
+
+  before(() => {
+    menuContentPage = new MenuContentPage();
+    productsListPage = new ProductsListPage();
+    shopingCartPage = new ShopingCartPage();
+    loginPage = new LoginPage();
+    addressStepPage = new AddressStepPage();
+    shippingStepPage = new ShippingStepPage();
+    paymentStepPage = new PaymentStepPage();
+  });
+
   it("then the t-shirt should be bought", () => {
+    // Arrange
+    const email = "aperdomobo@gmail.com";
+    const password = "WorkshopProtractor";
+    const messageOrderComplete = "Your order on My Store is complete.";
+
     menuContentPage.visitMenuContentPage();
 
+    // Act
     menuContentPage.goToTShirtMenu();
 
     productsListPage.addToMyCart();
@@ -39,6 +53,7 @@ describe("Buy a t-shirt", () => {
     paymentStepPage.payWithBank();
     paymentStepPage.proceedCheckout();
 
-    paymentStepPage.verifyOrderComplete("Your order on My Store is complete.");
+    // Assert
+    paymentStepPage.verifyOrderComplete(messageOrderComplete);
   });
 });

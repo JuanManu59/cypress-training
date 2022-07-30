@@ -3,7 +3,7 @@ class ShippingStepPage {
   private checkoutBtn: string;
 
   constructor() {
-    this.checkTermsOfService = "input#cgv";
+    this.checkTermsOfService = 'input#cgv';
     this.checkoutBtn = 'button[name="processCarrier"]';
   }
 

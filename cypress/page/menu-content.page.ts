@@ -4,7 +4,7 @@ class MenuContentPage {
 
   constructor() {
     this.tShirtMenu = '#block_top_menu > ul > li > a[title="T-shirts"]';
-    this.menuContentPageURL = "http://automationpractice.com/";
+    this.menuContentPageURL = 'http://automationpractice.com/';
   }
 
   public visitMenuContentPage(): void {

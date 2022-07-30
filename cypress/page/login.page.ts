@@ -4,9 +4,9 @@ class LoginPage {
   private loginBtn: string;
 
   constructor() {
-    this.addressText = "#email";
-    this.passwordText = "#passwd";
-    this.loginBtn = "button#SubmitLogin.button.btn.btn-default.button-medium";
+    this.addressText = '#email';
+    this.passwordText = '#passwd';
+    this.loginBtn = 'button#SubmitLogin.button.btn.btn-default.button-medium';
   }
 
   public login(email: string, pwd: string): void {

@@ -19,13 +19,12 @@ const password = "WorkshopProtractor";
 
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
+    const productName = "Faded Short Sleeve T-shirts";
     menuContentPage.visitMenuContentPage();
 
     menuContentPage.goToTShirtMenu();
 
-    productsListPage.addToMyCart();
-
-    productsListPage.proceedCheckout();
+    productsListPage.addTShirtToCart(productName);
 
     shopingCartPage.goToCheckout();
 

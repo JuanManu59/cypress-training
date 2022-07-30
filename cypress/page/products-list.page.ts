@@ -12,9 +12,9 @@ class ProductsListPage {
   public addTShirtToCart(productName: string): void {
     this.findProductByName(productName).find(this.addCarBtn).click();
     cy.get(this.checkoutBtn).click();
-}
+  }
 
-  public findProductByName(productName: string): void {
+  private findProductByName(productName: string): void {
     return cy.get(this.productList).filter(`:contains("${productName}")`)
   }
 }

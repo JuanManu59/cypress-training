@@ -2,7 +2,7 @@ class AddressStepPage {
   private proceedCheckout: string;
 
   constructor() {
-    this.proceedCheckout = "button.button.btn.btn-default.button-medium";
+    this.proceedCheckout = 'button[name="processAddress"]';
   }
 
   public proceedCheckoutAuth(): void {

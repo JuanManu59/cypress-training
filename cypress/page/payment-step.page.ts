@@ -6,7 +6,7 @@ class PaymentStepPage {
   constructor() {
     this.payByBankBtn = "a.bankwire";
     this.checkoutBtn = "button.button.btn.btn-default.button-medium";
-    this.orderComplete = "#center_column > div > p > strong";
+    this.orderComplete = "#center_column .cheque-indent strong";
   }
 
   public payWithBank(): void {

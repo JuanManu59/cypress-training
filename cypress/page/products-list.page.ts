@@ -4,7 +4,7 @@ class ProductsListPage {
 
   constructor() {
     this.addCarBtn = "#center_column a.button.ajax_add_to_cart_button.btn.btn-default";
-    this.checkoutBtn = "[style*='display: block;'] .button-container > a";
+    this.checkoutBtn = '.button-container > a[title="Proceed to checkout"]';
   }
 
   public addToMyCart(): void {

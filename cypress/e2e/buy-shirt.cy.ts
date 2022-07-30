@@ -1,14 +1,20 @@
-import {MenuContentPage, ProductsListPage, ShopingCartPage,
-  LoginPage, AddressStepPage, ShippingStepPage, PaymentStepPage} from "../page/index";
+import {
+  MenuContentPage,
+  ProductsListPage,
+  ShopingCartPage,
+  LoginPage,
+  AddressStepPage,
+  ShippingStepPage,
+  PaymentStepPage} from "../page/index";
 
 describe("Buy a t-shirt", () => {
-  let menuContentPage:MenuContentPage;
-  let productsListPage:ProductsListPage;
-  let shopingCartPage:ShopingCartPage;
-  let loginPage:LoginPage;
-  let addressStepPage:AddressStepPage;
-  let shippingStepPage:ShippingStepPage;
-  let paymentStepPage:PaymentStepPage;
+  let menuContentPage: MenuContentPage;
+  let productsListPage: ProductsListPage;
+  let shopingCartPage: ShopingCartPage;
+  let loginPage: LoginPage;
+  let addressStepPage: AddressStepPage;
+  let shippingStepPage: ShippingStepPage;
+  let paymentStepPage: PaymentStepPage;
 
   before(() => {
     menuContentPage = new MenuContentPage();

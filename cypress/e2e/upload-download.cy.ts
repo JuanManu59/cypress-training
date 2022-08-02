@@ -1,22 +1,40 @@
-import {UploadFilePage} from "../page/index";
+import {UploadFilePage, DownloadFilePage} from "../page/index";
 
-describe("Upload File", () => {
+describe("Upload and download Files", () => {
   let uploadPage: UploadFilePage;
+  let downloadFilePage: DownloadFilePage;
 
   before(() => {
     uploadPage = new UploadFilePage();
+    downloadFilePage = new DownloadFilePage();
   });
 
-  it("Should have a Tittle", () => {
-    // Arrange
-    const fileName = "example.json";
-    uploadPage.visitUploadFilePage();
+  describe("Upload a file", () => {
+    it("Should have a Tittle", () => {
+      // Arrange
+      const fileName = "example.json";
+      uploadPage.visitUploadFilePage();
 
-    // Act
-    uploadPage.uploadFile(fileName);
-    uploadPage.getTittle();
+      // Act
+      uploadPage.uploadFile(fileName);
+      uploadPage.getTittle();
 
-    // Assert
-    uploadPage.verifyTittle(fileName);
+      // Assert
+      uploadPage.verifyTittle(fileName);
+    });
+  });
+
+  describe("Download a file", () => {
+    it("The file exist", () => {
+      // Arrange
+      const fileName = "sampleFile.jpeg";
+      downloadFilePage.visitUploadFilePage();
+
+      // Act
+      downloadFilePage.downloadFile();
+
+      // Assert
+      downloadFilePage.verifyMessage(fileName);
+    });
   });
 });

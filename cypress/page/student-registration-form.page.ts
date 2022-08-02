@@ -27,8 +27,8 @@ class StudentRegistrationForm {
     this.submitBtn = '#submit';
     this.stateList = '#state > div > div.css-1hwfws3 > div.css-1wa3eu0-placeholder';
     this.cityList = '#city > div > div.css-1hwfws3 > div.css-1wa3eu0-placeholder';
-    this.NCROstate = "#react-select-3-option-0";
-    this.delhiCity = "#react-select-4-option-0";
+    this.NCROstate = "#react-select-3-input";
+    this.delhiCity = "#react-select-4-input";
   }
 
   public visitStudentForm(): void {
@@ -46,9 +46,11 @@ class StudentRegistrationForm {
     });
     cy.get(this.currentAddressText).type(personalInformation.currentAddress);
     cy.get(this.stateList).click({force:true});
-    cy.get(this.NCROstate).click();
+    cy.get(this.NCROstate).type(personalInformation.state);
+    cy.get(this.NCROstate).type('{enter}');
     cy.get(this.cityList).click({force:true});
-    cy.get(this.delhiCity).click();
+    cy.get(this.delhiCity).type(personalInformation.city);
+    cy.get(this.delhiCity).type('{enter}');
     cy.get(this.submitBtn).click({force:true});
   }
   

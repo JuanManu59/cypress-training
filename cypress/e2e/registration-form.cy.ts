@@ -1,5 +1,5 @@
 import {StudentRegistrationForm} from "../page/index";
-import {PersonalInformation} from "../interfaces/PersonalInformation";
+import {PersonalInformation} from "../page/interfaces/PersonalInformation";
 
 describe("Personal form page", () => {
   let personalFormPage: StudentRegistrationForm;
@@ -12,9 +12,9 @@ describe("Personal form page", () => {
       lastName: "Salazar",
       email: "test@email.com",
       gender: "Male",
-      dateOfBirth: "27 Jul 2016",
+      dateOfBirth: "01 August,2022",
       mobileNumber: "3656589156",
-      hobbies: ["1", "2", "3"],
+      hobbies: ["Sports", "Reading", "Music"],
       currentAddress: "Av siempreViva # 123",
       state: "NCR",
       city: "Delhi",

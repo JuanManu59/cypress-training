@@ -12,7 +12,7 @@ describe("Personal form page", () => {
       lastName: "Salazar",
       email: "test@email.com",
       gender: "Male",
-      dateOfBirth: "02 August,2022",
+      dateOfBirth: "27 July 2016",
       mobileNumber: "3656589156",
       hobbies: ["Sports", "Reading", "Music"],
       currentAddress: "Av siempreViva # 123",

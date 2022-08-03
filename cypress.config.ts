@@ -22,5 +22,6 @@ export default defineConfig({
         json: true,
       },
     },
+    retries: 5,
   },
 });

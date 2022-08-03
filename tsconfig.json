@@ -6,7 +6,8 @@
         "lib": ["es5", "dom"],
         "types": [
             "cypress",
-            "node"
+            "node",
+            "cypress-file-upload"
         ]
     },
     "include": [

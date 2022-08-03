@@ -5,16 +5,16 @@ let iframePage: IframePage;
 describe("Working with Iframes", () => {
   before(() => {
     iframePage = new IframePage();
+    iframePage.visit();
   });
 
   describe("When the user go the w3schools page", () => {
     it("Should have the Title 'HTML Tutorial'", () => {
       // Arrange
       const tittleHTMLTutorial = "HTML Tutorial";
-      iframePage.visit();
       // Act
       // Assert
-      iframePage.getFrameTitle(tittleHTMLTutorial);
+      iframePage.getFrameTitle().should("eq", tittleHTMLTutorial);
     });
   });
 
@@ -25,7 +25,7 @@ describe("Working with Iframes", () => {
       // Act
       iframePage.goToCssPageInFrame();
       // Assert
-      iframePage.getFrameTitle(tittleCSSTutorial);
+      iframePage.getFrameTitle().should("eq", tittleCSSTutorial);
     });
   });
 });

@@ -17,7 +17,6 @@ describe("Upload and download Files", () => {
 
       // Act
       uploadPage.uploadFile(fileName);
-      uploadPage.getTittle(fileName);
 
       // Assert
       uploadPage.verifyTittle(fileName);

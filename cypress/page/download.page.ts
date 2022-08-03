@@ -13,7 +13,7 @@ class DownloadFilePage {
       cy.visit(this.downloadFilePageURL);
     }
   
-    downloadFile(): void {
+    public downloadFile(): void {
       cy.get(this.downloadBtn).click();
     }
   
@@ -23,4 +23,3 @@ class DownloadFilePage {
   }
   
   export {DownloadFilePage};
-  

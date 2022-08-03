@@ -10,7 +10,7 @@ class IframePage {
       this.iframe = '[src="default.asp"]';
       this.titleCSS = 'a[title="CSS Tutorial"]';
       this.titleHTML = "#main > h1";
-      this.iFrameUrl = 'https://www.w3schools.com/css/default.asp';
+      this.iFrameUrl = 'https://www.w3schools.com/css/';
     }
 
     public visit(): void{

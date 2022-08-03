@@ -9,7 +9,7 @@ class DownloadFilePage {
         this.fileAddress = "./cypress/downloads/"; 
     }
   
-    public visitUploadFilePage(): void {
+    public visitDownloadFilePage(): void {
       cy.visit(this.downloadFilePageURL);
     }
   

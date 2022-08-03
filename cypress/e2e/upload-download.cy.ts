@@ -27,7 +27,7 @@ describe("Upload and download Files", () => {
     it("The file exist", () => {
       // Arrange
       const fileName = "sampleFile.jpeg";
-      downloadFilePage.visitUploadFilePage();
+      downloadFilePage.visitDownloadFilePage();
 
       // Act
       downloadFilePage.downloadFile();
